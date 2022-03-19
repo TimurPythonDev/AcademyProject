@@ -1,0 +1,29 @@
+{% load static %}
+<div class="navbar">
+    <div class="container navbar-box">
+        <div class="left-nav">
+            <a href="{% url 'index' %}" class="academy">academy</a>
+            <a href="/">
+{#                <div class="logo-png">#}
+{#                    <img src="{% static './/img/remove-2-removebg-preview.png' %}" alt="">#}
+{#                </div>#}
+            </a>
+        </div>
+        <div class="center-nav">
+            <a href="{% url 'index' %}" class="links">Asosiy</a>
+            <a href="{% url 'about' %}" class="links">Biz xaqimizda</a>
+            <a href="{% url 'course' %}" class="links">Kurs Haqida</a>
+            <a href="{% url 'contact' %}" class="links">Bog`lanish</a>
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'add-course' %}" class="links">Kurs qo'shish</a>
+                <a href="{% url 'inbox' %}" class="links">Kursga yozilganlar</a>
+            {% endif %}
+        </div>
+        <div class="right-nav">
+            <a href="tel: +998916980700" class="nomer">(91) 698-07-00</a>
+            <button class="btn btn-warning"><a href="{% url 'login_page' %}">Login</a></button>
+            <button class="btn btn-warning"><a href="{% url 'Logout' %}">Logout</a></button>
+        </div>
+    </div>
+</div>
+

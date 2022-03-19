@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+{% if request == 'edit-course' %}
+    <h3>Kursni tahrirlash</h3>
+{% else %}
+    <h3>Kurs Qo'shish</h3>
+{% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.media}}
+        {% for field in form %}
+
+        <div class="mb-4">
+            <label for="exampleInputPassword1" class="form-label">{{field.label}}</label>
+            {{field}}
+        </div>
+
+        {% endfor %}
+
+        <input class="btn btn-primary" type="submit" value="submit">
+
+    </form>
+</div>
+
+
+{% endblock %}

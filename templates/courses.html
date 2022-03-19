@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+    <!-- carusel-add -->
+<div class="box">
+    <div class="container carusel-box">
+        <div class="anime">
+            <div class="img-box courses-car" style="background-image: url('./images/bg.jpg');">
+                <div class="width">
+                    <h1 class="box-h1">O`quv markazidagi <br> barcha kurslar</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- all -->
+<div class="product-course">
+    <h1 class="batar" id="all">Barcha Kurslar</h1>
+    <div class="container pro-course-box">
+        <div class="top-proi">
+            {% for course in course_all %}
+                <div class="cart-pro">
+                    <a href="#" class="costs-all">Was <s>${{ course.course_discount }}</s> Now ${{ course.course_price }}</a>
+                    <div class="png-of-course">
+                        <img src="{{ course.image.url }}" alt="">
+                    </div>
+                    <h3>{{ course.course_name }}</h3>
+                    <p>{{ course.course_continu }}</p>
+                    <a href="{% url 'register' %}" class="up-sign">Kursga yozilish</a>
+                    {% if request.user.is_authenticated %}
+                        <a class="btn btn-warning" href="{% url 'edit-course' course.id %}">Edit</a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

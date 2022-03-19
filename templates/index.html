@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+    <!-- carusel-add -->
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+<div class="box">
+    <div class="container carusel-box">
+        <div class="anime">
+            <div class="img-box support" style="background-image: url('./images/bg.jpg');">
+                <div class="birga">
+                    <div class="width">
+                        <h1 class="box-h1 h5647">Assalamu alaykum, <br> Academy ga Xush <br> Kelibsiz</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Assosiy Maqsadimiz -->
+<div class="container">
+    <div class="endi-osha">
+        <h1 class="h12">Bizning Maqsadimiz</h1>
+        <p class="biznig malumot">Bizni o`quv markazimiz o`z o`quvchilarini hech qanday oliy o`quv yurtlariga
+            yo`naltirmaydi. Biz o`z o`quvchilarimizga sohasida yetuk mutahasis qilib tarbiyalaymiz. Biz ularning
+            kelajaklari haqida qayg`uramiz!</p>
+    </div>
+    <div class="hero-main">
+        <a href="#" class="rek">
+            <div class="rek-img">
+                <img src="../static/img/robot.png" alt="">
+            </div>
+            <h3 class="rek-h3">Lorem</h3>
+            <p class="rek-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a quibusdam velit soluta
+                dignissimos earum delectus officia porro! Nesciunt nisi, ab ex veritatis quos et excepturi enim
+                doloribus quod
+                praesentium!</p>
+        </a>
+        <a href="#" class="rek">
+            <div class="rek-img">
+                <img src="../static/img/robot.png" alt="">
+            </div>
+            <h3 class="rek-h3">Lorem</h3>
+            <p class="rek-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a quibusdam velit soluta
+                dignissimos earum delectus officia porro! Nesciunt nisi, ab ex veritatis quos et excepturi enim
+                doloribus quod
+                praesentium!</p>
+        </a>
+        <a href="#" class="rek lom">
+            <div class="rek-img">
+                <img src="../static/img/robot.png" alt="">
+            </div>
+            <h3 class="rek-h3">Lorem</h3>
+            <p class="rek-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a quibusdam velit soluta
+                dignissimos earum delectus officia porro! Nesciunt nisi, ab ex veritatis quos et excepturi enim
+                doloribus quod
+                praesentium!</p>
+        </a>
+    </div>
+</div>
+    <!-- product -->
+<div class="product">
+    <div class="container product-box">
+        <div data-aos-duration="2000" data-aos="fade-up" class="line-1">
+            <div class="line-left">
+                <h2 class="math-h2">MATEMATIKA</h2>
+                <p class="plar">Hozirgi kunda eng daromadli fandan <br> matematika fanidan bo`yicha siz
+                    <br> muvaqqiyatga erishishingiz mumkin.</p>
+            </div>
+            <div class="img-math">
+                <img src="../static/img/math.jpg" alt="">
+            </div>
+        </div>
+        <div data-aos-duration="2000" data-aos="fade-down" class="line-1 reverce">
+            <div class="img-math">
+                <img src="../static/img/fizika.jpg" alt="">
+            </div>
+            <div class="line-left">
+                <h2 class="math-h2">FIZIKA</h2>
+                <p class="plar">Hozirgi kunda eng daromadli fandan <br> matematika fanidan bo`yicha siz
+                    <br> muvaqqiyatga erishishingiz mumkin.</p>
+            </div>
+        </div>
+        <div data-aos-duration="2000" data-aos="fade-up" class="line-1">
+            <div class="line-left">
+                <h2 class="math-h2">KIMYO</h2>
+                <p class="plar">Hozirgi kunda eng daromadli fandan <br> matematika fanidan bo`yicha siz
+                    <br> muvaqqiyatga erishishingiz mumkin.</p>
+            </div>
+            <div class="img-math">
+                <img src="../static/img/ximiya.jpg" alt="">
+            </div>
+        </div>
+        <div data-aos-duration="2000" data-aos="fade-down" class="line-1 reverce">
+            <div class="img-math">
+                <img src="../static/img/english.jpg" alt="">
+            </div>
+            <div class="line-left">
+                <h2 class="math-h2">INGLIZ TILI</h2>
+                <p class="plar">Hozirgi kunda eng daromadli fandan <br> matematika fanidan bo`yicha siz
+                    <br> muvaqqiyatga erishishingiz mumkin.</p>
+            </div>
+        </div>
+        <div data-aos-duration="2000" data-aos="fade-up" class="line-1">
+            <div class="line-left">
+                <h2 class="math-h2">BIOLOGIYA</h2>
+                <p class="plar">Hozirgi kunda eng daromadli fandan <br> matematika fanidan bo`yicha siz
+                    <br> muvaqqiyatga erishishingiz mumkin.</p>
+            </div>
+            <div class="img-math">
+                <img src="../static/img/biology.jpg" alt="">
+            </div>
+        </div>
+        <div data-aos-duration="2000" data-aos="fade-down" class="line-1 reverce">
+            <div class="img-math">
+                <img src="../static/img/arxitektor.jpg" alt="">
+            </div>
+            <div class="line-left">
+                <h2 class="math-h2">CHIZMACHILIK</h2>
+                <p class="plar">Hozirgi kunda eng daromadli fandan <br> matematika fanidan bo`yicha siz
+                    <br> muvaqqiyatga erishishingiz mumkin.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

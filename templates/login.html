@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="main-wrapper login-body">
+         <div class="login-wrapper">
+            <div class="container">
+               <div class="loginbox">
+                  <div class="login-left">
+                     <img class="img-fluid" src="{% static 'assets/img/logo-white.png' %}" alt="Logo">
+                  </div>
+                  <div class="login-right">
+                     <div class="login-right-wrap">
+                        <h1>Login</h1>
+                        <p class="account-subtitle">Access to our dashboard</p>
+                         {% if messages %}
+                             {% for message in messages %}
+                                 {% if message.tags == 'error' %}
+                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                {{ message }}                               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                                 {% endif %}
+                             {% endfor %}
+                         {% endif %}
+                         <form action="{% url 'Login' %}" method="post">
+                            {% csrf_token %}
+                           <div class="form-group">
+                              <input class="form-control" name="email" type="text" placeholder="Email">
+                           </div>
+                           <div class="form-group">
+                              <input class="form-control" name="password" type="password" placeholder="Password">
+                           </div>
+                           <div class="form-group">
+                              <button class="btn btn-primary btn-block" type="submit">Login</button>
+                           </div>
+                        </form>
+                        <div class="text-center forgotpass"><a href="forgot-password.html">Forgot Password?</a></div>
+                        <div class="login-or">
+                           <span class="or-line"></span>
+                           <span class="span-or">or</span>
+                        </div>
+                        <div class="social-login">
+                           <span>Login with</span>
+                           <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a><a href="#" class="google"><i class="fab fa-google"></i></a>
+                        </div>
+                        <div class="text-center dont-have">Don’t have an account? <a href="register.html">Register</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+{% endblock %}
